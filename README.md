@@ -235,6 +235,10 @@ Scripts are not auto-executed. The agent can choose to run them via its `bash` t
 
 ---
 
+## 🔐 Security
+
+Found a skill that gives dangerous advice, a script that does something destructive, or hardcoded secrets in an example? **Don't open a public issue.** See [SECURITY.md](SECURITY.md) for how to report privately.
+
 ## 📜 License
 
 [MIT](LICENSE). Individual skills may declare their own `license` in frontmatter; the repo license applies when none is set.

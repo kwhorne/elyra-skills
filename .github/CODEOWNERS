@@ -1,0 +1,36 @@
+# CODEOWNERS — auto-assign reviewers for pull requests.
+#
+# Syntax: <path-pattern>  <owner1> [<owner2> ...]
+# Later rules override earlier ones. Patterns follow .gitignore-style globs.
+# See: https://docs.github.com/en/repositories/managing-your-repositories-settings-and-customizations/customizing-your-repository/about-code-owners
+
+# ----------------------------------------------------------------------------
+# Default owner — anything not matched below
+# ----------------------------------------------------------------------------
+*                                @kwhorne
+
+# ----------------------------------------------------------------------------
+# Repository infrastructure — extra scrutiny on anything that affects CI,
+# the validator, the registry schema, or how contributors interact with the
+# repo. Changes here ripple through every future PR.
+# ----------------------------------------------------------------------------
+/.github/                        @kwhorne
+/scripts/                        @kwhorne
+/registry.json                   @kwhorne
+/registry.schema.json            @kwhorne
+/CONTRIBUTING.md                 @kwhorne
+/SECURITY.md                     @kwhorne
+/README.md                       @kwhorne
+/LICENSE                         @kwhorne
+
+# ----------------------------------------------------------------------------
+# Skills — currently all owned by the registry maintainer. As contributors
+# adopt skills, add per-skill entries here so they get auto-pinged on
+# changes to "their" skill. Example:
+#
+#   /skills/observability/        @kwhorne @some-contributor
+#   /skills/api-design/           @kwhorne @api-expert
+#
+# Skill folders not listed individually inherit the default owner above.
+# ----------------------------------------------------------------------------
+/skills/                         @kwhorne
