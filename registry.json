@@ -72,6 +72,38 @@
       "tags": ["security", "review", "owasp"],
       "version": "1.0.0",
       "author": "elyra-skills"
+    },
+    {
+      "name": "accessibility-review",
+      "description": "Perform a WCAG-flavored accessibility review of UI code or markup. Use when the user asks for an a11y review, accessibility audit, WCAG check, or wants to make a component/page usable for assistive tech.",
+      "path": "skills/accessibility-review",
+      "tags": ["accessibility", "a11y", "wcag", "review"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "performance-budget",
+      "description": "Define and enforce performance budgets for web apps - bundle size, Core Web Vitals, render time, API latency. Use when the user asks to set perf budgets, review performance, investigate slowness, or set up performance gates in CI.",
+      "path": "skills/performance-budget",
+      "tags": ["performance", "budgets", "web-vitals"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "changelog",
+      "description": "Maintain a CHANGELOG.md following the Keep a Changelog format with semver. Use when the user asks to update the changelog, add release notes, prepare a release, or generate changelog entries from commits or merged PRs.",
+      "path": "skills/changelog",
+      "tags": ["changelog", "release", "semver"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "dependency-update",
+      "description": "Safely update project dependencies - assess risk, batch by risk level, verify with tests, and produce a clean changelog. Use when the user asks to update dependencies, bump packages, audit outdated deps, or handle a security advisory.",
+      "path": "skills/dependency-update",
+      "tags": ["dependencies", "maintenance", "security"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
     }
   ]
 }

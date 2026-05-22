@@ -45,6 +45,10 @@ This repo is a community pool of skills that:
 | [`test-writing`](skills/test-writing/) | Decide what to test, structure tests with arrange/act/assert, avoid common pitfalls |
 | [`api-design`](skills/api-design/) | Design consistent HTTP/REST endpoints: naming, status codes, pagination, errors |
 | [`security-audit`](skills/security-audit/) | OWASP-flavored review focused on input handling, auth, secrets, and dependencies |
+| [`accessibility-review`](skills/accessibility-review/) | WCAG 2.2 AA review: semantics, keyboard, screen reader, contrast, forms, dynamic UI |
+| [`performance-budget`](skills/performance-budget/) | Define & enforce perf budgets: bundle size, Core Web Vitals, API latency, CI gates |
+| [`changelog`](skills/changelog/) | Maintain `CHANGELOG.md` (Keep a Changelog + SemVer); cut releases cleanly |
+| [`dependency-update`](skills/dependency-update/) | Safely bump dependencies: risk-classify, batch, verify, handle advisories |
 
 The full machine-readable index is in [`registry.json`](registry.json). It's what `/skills install` uses to resolve names → URLs.
 
@@ -184,7 +188,7 @@ We love new skills. Check [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 - **Update [`registry.json`](registry.json) and the catalog table** in this README
 - **MIT-compatible license** required
 
-Good first contributions: skill stubs for areas not yet covered (e.g. `accessibility-review`, `performance-budget`, `dependency-update`).
+Good first contributions: skill stubs for areas not yet covered (e.g. `i18n-review`, `database-migration`, `incident-response`, `feature-flag-rollout`, `release-checklist`).
 
 ---
 
