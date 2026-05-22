@@ -104,6 +104,54 @@
       "tags": ["dependencies", "maintenance", "security"],
       "version": "1.0.0",
       "author": "elyra-skills"
+    },
+    {
+      "name": "i18n-review",
+      "description": "Audit code and UI for internationalization correctness - string extraction, pluralization, dates/numbers/currencies, RTL support, and locale-aware sorting. Use when the user asks for an i18n review, localization audit, or wants to make an app translation-ready.",
+      "path": "skills/i18n-review",
+      "tags": ["i18n", "l10n", "localization", "review"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "incident-response",
+      "description": "Work through a production incident calmly - triage severity, mitigate first, communicate clearly, then root-cause and document. Use when the user reports prod is down, an outage is in progress, a degraded service, or asks for help during/after an incident.",
+      "path": "skills/incident-response",
+      "tags": ["incident", "sre", "ops", "postmortem"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "feature-flag-rollout",
+      "description": "Plan and execute a safe feature rollout using flags - design the flag, ramp gradually, monitor, and clean up. Use when the user asks about feature flags, gradual rollout, dark launches, kill switches, canary releases, or A/B test plumbing.",
+      "path": "skills/feature-flag-rollout",
+      "tags": ["feature-flags", "rollout", "deployment"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "release-checklist",
+      "description": "Run through a structured pre-release, release, and post-release checklist to ship safely. Use when the user asks to prepare a release, cut a version, deploy to production, or wants a checklist for shipping software.",
+      "path": "skills/release-checklist",
+      "tags": ["release", "deployment", "checklist"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "database-migration",
+      "description": "Plan and write safe database schema migrations using the expand/contract pattern with zero-downtime in mind, lock awareness, and rollback plans. Use when the user asks to add a migration, change schema, alter a table, or migrate data.",
+      "path": "skills/database-migration",
+      "tags": ["database", "migration", "schema", "zero-downtime"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "observability",
+      "description": "Decide what to instrument with logs, metrics, and traces so a system is debuggable in production. Use when the user asks about observability, monitoring, logging, metrics, tracing, alerts, or how to make a service debuggable.",
+      "path": "skills/observability",
+      "tags": ["observability", "monitoring", "logging", "metrics", "tracing"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
     }
   ]
 }

@@ -49,6 +49,12 @@ This repo is a community pool of skills that:
 | [`performance-budget`](skills/performance-budget/) | Define & enforce perf budgets: bundle size, Core Web Vitals, API latency, CI gates |
 | [`changelog`](skills/changelog/) | Maintain `CHANGELOG.md` (Keep a Changelog + SemVer); cut releases cleanly |
 | [`dependency-update`](skills/dependency-update/) | Safely bump dependencies: risk-classify, batch, verify, handle advisories |
+| [`i18n-review`](skills/i18n-review/) | Internationalization audit: strings, plurals, dates/numbers/currencies, RTL, sorting |
+| [`incident-response`](skills/incident-response/) | Production incident workflow: triage, mitigate, communicate, postmortem |
+| [`feature-flag-rollout`](skills/feature-flag-rollout/) | Plan & execute safe feature rollouts: flag design, ramp, monitor, clean up |
+| [`release-checklist`](skills/release-checklist/) | Pre/during/post-release checklist with rollback plan |
+| [`database-migration`](skills/database-migration/) | Safe schema changes: expand/contract, lock awareness, backfill strategy |
+| [`observability`](skills/observability/) | What to instrument with logs, metrics, traces; alerts that are actionable |
 
 The full machine-readable index is in [`registry.json`](registry.json). It's what `/skills install` uses to resolve names → URLs.
 
@@ -188,7 +194,7 @@ We love new skills. Check [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 - **Update [`registry.json`](registry.json) and the catalog table** in this README
 - **MIT-compatible license** required
 
-Good first contributions: skill stubs for areas not yet covered (e.g. `i18n-review`, `database-migration`, `incident-response`, `feature-flag-rollout`, `release-checklist`).
+Good first contributions: skill stubs for areas not yet covered (e.g. `code-style-guide`, `architecture-review`, `data-privacy-review`, `cost-optimization`, `onboarding-doc`, `runbook-author`, `caching-strategy`, `error-handling`).
 
 ---
 
