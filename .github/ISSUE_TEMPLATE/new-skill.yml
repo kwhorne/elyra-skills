@@ -1,0 +1,109 @@
+name: 💡 Suggest a new skill
+description: Propose a new skill to add to the registry
+title: "skill: <proposed-name>"
+labels: ["new-skill", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new skill! Before filing, please confirm:
+
+        - The skill is **standalone and generic** — not tied to a specific framework, stack, or tool (those belong in [Elyra extensions](https://elyracode.com), not this registry)
+        - There isn't already a [similar skill](https://github.com/kwhorne/elyra-skills/tree/main/skills) covering the same ground
+        - You can write a one-sentence description that tells the agent **what the skill does and when to use it**
+
+        Not sure if it fits? File anyway — we'd rather discuss.
+
+  - type: input
+    id: name
+    attributes:
+      label: Proposed skill name
+      description: Lowercase, hyphens only, ≤64 chars. Should also be a usable folder name (`skills/<name>/`).
+      placeholder: e.g. dockerfile-review
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: One-sentence description
+      description: |
+        This is the single most important thing. The agent only sees this string until it decides to load the skill.
+
+        **Lead with what the skill does + when to use it.** ≤1024 characters.
+      placeholder: |
+        e.g. "Review a Dockerfile for size, security, and build-cache efficiency. Use when the user asks to audit a Dockerfile, reduce image size, or improve build times."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: What's in scope
+      description: Bullet list of what the skill should cover.
+      placeholder: |
+        - Multi-stage builds
+        - Layer ordering for cache hit rate
+        - Non-root user, minimal base images
+        - .dockerignore hygiene
+        - Common security pitfalls (running as root, secrets in layers)
+    validations:
+      required: true
+
+  - type: textarea
+    id: not-in-scope
+    attributes:
+      label: What's intentionally NOT in scope
+      description: Equally important. Helps keep the skill focused.
+      placeholder: |
+        - Kubernetes manifests (separate skill)
+        - Specific language ecosystems (Python wheels, npm caching) — too varied
+        - Docker Compose
+
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Example triggers
+      description: What might a user say that should make the agent reach for this skill?
+      placeholder: |
+        - "Review my Dockerfile"
+        - "Why is my image so big?"
+        - "Audit this container build for security"
+        - "How can I speed up Docker builds?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: anti-patterns
+    attributes:
+      label: Anti-patterns the skill should flag (optional)
+      description: Common mistakes the skill should call out.
+      placeholder: |
+        - Using `:latest` tags
+        - `RUN apt-get install` without `--no-install-recommends`
+        - Copying `node_modules` from host
+        - Hardcoded secrets in `ENV` directives
+
+  - type: dropdown
+    id: ship
+    attributes:
+      label: Do you plan to write this yourself?
+      description: No pressure either way — we accept proposal-only issues. If yes, you'll save reviewers time by following [CONTRIBUTING.md](https://github.com/kwhorne/elyra-skills/blob/main/CONTRIBUTING.md).
+      options:
+        - "Yes — I'll open a PR"
+        - "Maybe — I'd like guidance first"
+        - "No — just proposing, hoping someone else picks it up"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I searched [existing issues](https://github.com/kwhorne/elyra-skills/issues?q=is%3Aissue) and didn't find a duplicate
+          required: true
+        - label: I checked the [skills catalog](https://github.com/kwhorne/elyra-skills#-catalog) and this isn't already covered
+          required: true
+        - label: This skill is generic, not tied to a specific framework or vendor
+          required: true

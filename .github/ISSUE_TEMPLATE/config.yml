@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Elyra documentation
+    url: https://elyracode.com
+    about: Setup, configuration, extensions, skills, SDK — everything about Elyra itself.
+  - name: 💬 Elyra discussions
+    url: https://github.com/kwhorne/elyra/discussions
+    about: Questions, ideas, and conversations about Elyra (not specific to a skill in this registry).
+  - name: 📋 Agent Skills specification
+    url: https://agentskills.io
+    about: The cross-agent format these skills follow.

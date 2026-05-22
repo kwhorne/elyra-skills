@@ -1,0 +1,95 @@
+name: ✨ Improve an existing skill
+description: Suggest content improvements to a skill that isn't strictly wrong
+title: "improve(<skill-name>): <short summary>"
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for improvements that aren't bug fixes — adding missing cases, clearer examples, additional anti-patterns, references to better sources, etc.
+
+        If the skill says something **incorrect**, use the [bug template](https://github.com/kwhorne/elyra-skills/issues/new?template=skill-bug.yml) instead.
+
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill?
+      description: Folder name under `skills/`.
+      placeholder: e.g. observability
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of improvement
+      options:
+        - "Add a missing case / pattern"
+        - "Clarify confusing wording"
+        - "Add a concrete example"
+        - "Add an anti-pattern"
+        - "Add a reference / link"
+        - "Restructure a section"
+        - "Update outdated information (not strictly wrong yet)"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: section
+    attributes:
+      label: Which section?
+      description: Heading or rough location in the skill.
+      placeholder: |
+        "## Common pitfalls" table
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: |
+        What would you add, change, or remove? Be concrete — actual text or bullets are more useful than abstract feedback.
+      placeholder: |
+        Add a row to the pitfalls table:
+        | Pitfall | Why it hurts | Fix |
+        |---|---|---|
+        | Logging at error level for handled exceptions | Drowns real alerts | Use warn or info; alert on rate |
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does this matter?
+      description: When would an agent reading this skill be better off with your change?
+      placeholder: |
+        I've seen agents follow this skill and miss <case>. Adding the example would make it explicit.
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References (optional)
+      description: Links supporting the addition.
+
+  - type: dropdown
+    id: ship
+    attributes:
+      label: Will you open a PR?
+      options:
+        - "Yes — I'll open a PR"
+        - "Maybe — would like feedback on the proposal first"
+        - "No — just suggesting"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I searched [existing issues](https://github.com/kwhorne/elyra-skills/issues?q=is%3Aissue) and didn't find a duplicate
+          required: true
+        - label: This is an improvement, not a bug (skill isn't saying anything incorrect)
+          required: true

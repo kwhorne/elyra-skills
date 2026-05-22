@@ -1,0 +1,87 @@
+name: 🐛 Bug in existing skill
+description: Report incorrect, outdated, or harmful advice in a skill
+title: "bug(<skill-name>): <short summary>"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for flagging this. Skills are read by AI agents and acted on, so wrong advice has real cost — we take bug reports seriously.
+
+        For **security issues** (e.g. a script that does something destructive, hardcoded secrets in an example), please report privately via [SECURITY.md](https://github.com/kwhorne/elyra-skills/blob/main/SECURITY.md) instead.
+
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill?
+      description: Folder name under `skills/`.
+      placeholder: e.g. caching-strategy
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How bad is this?
+      options:
+        - "🔴 Blocker — advice is wrong and could cause real harm (data loss, security issue, broken prod)"
+        - "🟠 Major — advice is misleading or significantly outdated"
+        - "🟡 Minor — small inaccuracy, typo, or clearer phrasing possible"
+        - "💭 Question — not sure if it's a bug, want to discuss"
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Where in the skill?
+      description: Quote the exact section, heading, or line if possible.
+      placeholder: |
+        Section: "Stampede protection"
+        Lines: "Use random jitter on TTLs..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong?
+      description: What does the skill say, and why is it incorrect or misleading?
+      placeholder: |
+        The skill recommends X, but in practice this causes Y because Z.
+        Specifically, for <case>, the right approach is <…>.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested fix (optional)
+      description: How would you change it? Concrete text is most helpful.
+      placeholder: |
+        Change "Use X" to "Use Y for <case>, X for <other case>" because <reason>.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context — how did you hit this?
+      description: Were you acting on the skill's advice, reviewing it, or did the agent quote it back to you?
+      placeholder: |
+        I asked Elyra to <task> and it followed this skill, which led to <outcome>.
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References (optional)
+      description: Links to docs, RFCs, blog posts, or other sources backing your point.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I searched [existing issues](https://github.com/kwhorne/elyra-skills/issues?q=is%3Aissue) and didn't find a duplicate
+          required: true
+        - label: This is not a security issue (those go to [SECURITY.md](https://github.com/kwhorne/elyra-skills/blob/main/SECURITY.md))
+          required: true
