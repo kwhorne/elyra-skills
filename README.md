@@ -55,6 +55,14 @@ This repo is a community pool of skills that:
 | [`release-checklist`](skills/release-checklist/) | Pre/during/post-release checklist with rollback plan |
 | [`database-migration`](skills/database-migration/) | Safe schema changes: expand/contract, lock awareness, backfill strategy |
 | [`observability`](skills/observability/) | What to instrument with logs, metrics, traces; alerts that are actionable |
+| [`code-style-guide`](skills/code-style-guide/) | Set up & enforce a style guide: formatter, linter, type checker, hooks, CI |
+| [`architecture-review`](skills/architecture-review/) | Evaluate designs against non-functional requirements; ADR template |
+| [`data-privacy-review`](skills/data-privacy-review/) | GDPR/CCPA-style audit: minimization, consent, subject rights, retention, transfers |
+| [`cost-optimization`](skills/cost-optimization/) | Find cloud waste (idle, oversized, egress, observability); quantify before recommending |
+| [`onboarding-doc`](skills/onboarding-doc/) | Make new hires productive in days, not weeks — 30-minute rule, journey structure |
+| [`runbook-author`](skills/runbook-author/) | Write runbooks the next on-call can actually use at 3 AM |
+| [`caching-strategy`](skills/caching-strategy/) | Design caches: layers, keys, TTLs, invalidation; avoid stampede/avalanche/penetration |
+| [`error-handling`](skills/error-handling/) | Throw vs return, where to catch, error → user/operator mapping, retries with idempotency |
 
 The full machine-readable index is in [`registry.json`](registry.json). It's what `/skills install` uses to resolve names → URLs.
 
@@ -194,7 +202,7 @@ We love new skills. Check [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 - **Update [`registry.json`](registry.json) and the catalog table** in this README
 - **MIT-compatible license** required
 
-Good first contributions: skill stubs for areas not yet covered (e.g. `code-style-guide`, `architecture-review`, `data-privacy-review`, `cost-optimization`, `onboarding-doc`, `runbook-author`, `caching-strategy`, `error-handling`).
+Good first contributions: skill stubs for areas not yet covered (e.g. `dockerfile-review`, `terraform-review`, `git-workflow`, `meeting-notes`, `release-notes`, `email-templates`, `sql-style`, `monorepo-strategy`, `feature-spec`).
 
 ---
 

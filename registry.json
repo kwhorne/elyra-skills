@@ -152,6 +152,70 @@
       "tags": ["observability", "monitoring", "logging", "metrics", "tracing"],
       "version": "1.0.0",
       "author": "elyra-skills"
+    },
+    {
+      "name": "code-style-guide",
+      "description": "Establish, document, and enforce a code style guide for a codebase - naming, structure, formatting, lints. Use when the user asks to set up a style guide, define coding conventions, configure linters/formatters, or enforce consistency across a team.",
+      "path": "skills/code-style-guide",
+      "tags": ["style", "conventions", "linting", "formatting"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "architecture-review",
+      "description": "Evaluate a system or component design against non-functional requirements - scalability, reliability, maintainability, security, cost. Use when the user asks for an architecture review, design critique, system review, or wants to evaluate a proposed design or ADR before commit.",
+      "path": "skills/architecture-review",
+      "tags": ["architecture", "design", "review", "adr"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "data-privacy-review",
+      "description": "Audit code and systems for GDPR/CCPA-style data privacy compliance - data minimization, consent, subject rights, retention, transfers, and breach readiness. Use when the user asks for a privacy review, GDPR check, data protection audit, or handling personal data correctly.",
+      "path": "skills/data-privacy-review",
+      "tags": ["privacy", "gdpr", "ccpa", "compliance", "review"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "cost-optimization",
+      "description": "Review cloud/infrastructure spend and propose specific cost reductions without sacrificing reliability - sized instances, storage tiers, idle resources, data egress, observability spend. Use when the user asks for cost review, FinOps audit, cloud bill investigation, or wants to reduce infra spend.",
+      "path": "skills/cost-optimization",
+      "tags": ["cost", "finops", "cloud", "optimization"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "onboarding-doc",
+      "description": "Write or audit onboarding documentation so a new engineer can get productive without ambient knowledge - setup, architecture, conventions, who to ask. Use when the user asks to write onboarding docs, improve dev setup instructions, create a getting-started guide, or audit new-hire experience.",
+      "path": "skills/onboarding-doc",
+      "tags": ["onboarding", "documentation", "dx"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "runbook-author",
+      "description": "Write a runbook for on-call so the next person can resolve an alert without paging the author - symptoms, diagnostics, mitigation, escalation. Use when the user asks to write a runbook, document an alert, create an incident playbook, or improve on-call ergonomics.",
+      "path": "skills/runbook-author",
+      "tags": ["runbook", "on-call", "ops", "sre"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "caching-strategy",
+      "description": "Design a caching strategy - decide what to cache, where, with what TTL and invalidation, and how to avoid the classic foot-guns (stampede, stale data, key collisions). Use when the user asks about caching, cache invalidation, Redis/Memcached design, HTTP caching, or fixing cache-related bugs.",
+      "path": "skills/caching-strategy",
+      "tags": ["caching", "performance", "redis", "http-cache"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "error-handling",
+      "description": "Design a coherent error-handling strategy across a codebase - what to throw vs return, where to catch, how to log, how errors surface to users and to operators. Use when the user asks about error handling, exception design, Result types, error boundaries, or wants to review how errors flow through the code.",
+      "path": "skills/error-handling",
+      "tags": ["errors", "reliability", "design"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
     }
   ]
 }
