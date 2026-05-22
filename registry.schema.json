@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kwhorne/elyra-skills/registry.schema.json",
+  "title": "Elyra Skills Registry",
+  "description": "Machine-readable index of skills available in this registry. Used by `/skills install` and similar commands.",
+  "type": "object",
+  "required": ["registry", "version", "source", "skills"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "registry": {
+      "type": "string",
+      "description": "Identifier for this registry."
+    },
+    "version": {
+      "type": "string",
+      "description": "Schema version for the registry file itself."
+    },
+    "source": {
+      "type": "object",
+      "required": ["type", "url"],
+      "properties": {
+        "type": { "const": "git" },
+        "url": { "type": "string", "format": "uri" },
+        "branch": { "type": "string" }
+      }
+    },
+    "docs": {
+      "type": "string",
+      "format": "uri",
+      "description": "Link to the documentation site for this registry / its agent."
+    },
+    "skills": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/skill" }
+    }
+  },
+  "$defs": {
+    "skill": {
+      "type": "object",
+      "required": ["name", "description", "path"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "maxLength": 64,
+          "description": "Skill identifier. Must match the SKILL.md frontmatter name and the folder name."
+        },
+        "description": {
+          "type": "string",
+          "maxLength": 1024,
+          "description": "Same as SKILL.md frontmatter description. Used by the agent to decide when to load the skill."
+        },
+        "path": {
+          "type": "string",
+          "description": "Relative path from registry root to the skill directory."
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "version": { "type": "string" },
+        "author": { "type": "string" },
+        "license": { "type": "string" },
+        "compatibility": { "type": "string" },
+        "homepage": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}

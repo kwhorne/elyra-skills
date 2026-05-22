@@ -1,0 +1,77 @@
+{
+  "$schema": "./registry.schema.json",
+  "registry": "elyra-skills",
+  "version": "1",
+  "source": {
+    "type": "git",
+    "url": "https://github.com/kwhorne/elyra-skills",
+    "branch": "main"
+  },
+  "docs": "https://elyracode.com",
+  "skills": [
+    {
+      "name": "code-review",
+      "description": "Perform a structured code review with severity-tagged feedback. Use when the user asks for a code review, PR feedback, or wants to evaluate a diff before merge.",
+      "path": "skills/code-review",
+      "tags": ["review", "quality"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "conventional-commits",
+      "description": "Generate Conventional Commits messages from staged changes. Use when the user asks to write a commit message, follow Conventional Commits, or summarize staged changes.",
+      "path": "skills/conventional-commits",
+      "tags": ["git", "commits", "conventions"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "debugging",
+      "description": "Systematically debug a problem: reproduce, isolate, fix, verify, prevent regression. Use when the user reports a bug, an unexpected error, or asks to investigate failing tests.",
+      "path": "skills/debugging",
+      "tags": ["debugging", "troubleshooting"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "pr-description",
+      "description": "Write a clear, scannable pull request description from a diff or branch. Use when the user asks to draft a PR description, summarize a branch, or prepare a change for review.",
+      "path": "skills/pr-description",
+      "tags": ["git", "pr", "review"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "refactoring",
+      "description": "Refactor code safely: characterization tests first, small reversible steps, verify after each step. Use when the user asks to refactor, restructure, clean up, or simplify existing code.",
+      "path": "skills/refactoring",
+      "tags": ["refactoring", "quality"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "test-writing",
+      "description": "Decide what to test, structure tests with arrange/act/assert, and avoid common pitfalls. Use when the user asks to write, add, or improve tests for existing code.",
+      "path": "skills/test-writing",
+      "tags": ["testing", "quality"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "api-design",
+      "description": "Design consistent HTTP/REST endpoints: resource naming, status codes, pagination, error formats, versioning. Use when the user asks to design, review, or extend an HTTP API.",
+      "path": "skills/api-design",
+      "tags": ["api", "rest", "design"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "security-audit",
+      "description": "Perform an OWASP-flavored security review focused on input handling, authentication, secrets, and dependencies. Use when the user asks for a security audit, threat review, or vulnerability check.",
+      "path": "skills/security-audit",
+      "tags": ["security", "review", "owasp"],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    }
+  ]
+}
