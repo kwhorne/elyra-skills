@@ -11,6 +11,7 @@ Standalone, vendor-neutral workflows the agent loads on demand — code review, 
 [![Works with: Elyra](https://img.shields.io/badge/works%20with-Elyra-000)](https://github.com/kwhorne/elyra)
 [![Works with: Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-D97757)](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![CI](https://github.com/kwhorne/elyra-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/kwhorne/elyra-skills/actions/workflows/validate.yml)
 
 [Catalog](#-catalog) · [Install](#-install) · [Anatomy of a skill](#-anatomy-of-a-skill) · [Contributing](CONTRIBUTING.md) · [Docs](https://elyracode.com) · [Spec](https://agentskills.io)
 

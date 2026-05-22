@@ -1,0 +1,59 @@
+name: Validate
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate registry & skills
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install jsonschema
+        run: pip install --quiet jsonschema
+
+      - name: Run validation
+        env:
+          # Disable color in CI logs — readable in plain text and GitHub Actions UI
+          NO_COLOR: "1"
+        run: python3 scripts/validate.py
+
+      - name: Lint shell scripts (shellcheck)
+        run: |
+          # Find any executable scripts shipped with skills and check them
+          mapfile -t SCRIPTS < <(find skills -type f -name '*.sh' -print)
+          if [ ${#SCRIPTS[@]} -eq 0 ]; then
+            echo "No shell scripts to lint."
+            exit 0
+          fi
+          echo "Linting ${#SCRIPTS[@]} shell script(s):"
+          printf '  %s\n' "${SCRIPTS[@]}"
+          shellcheck -e SC1091 "${SCRIPTS[@]}"
+
+      - name: Check for broken Markdown structure
+        run: |
+          # Every SKILL.md must have an H1 heading after the frontmatter
+          fail=0
+          while IFS= read -r f; do
+            # Skip the frontmatter block and check the next non-empty line
+            body=$(awk 'BEGIN{fm=0} /^---$/{fm++; next} fm>=2 && NF{print; exit}' "$f")
+            if ! echo "$body" | grep -qE '^# '; then
+              echo "::error file=$f::missing H1 heading after frontmatter"
+              fail=1
+            fi
+          done < <(find skills -name SKILL.md)
+          exit $fail

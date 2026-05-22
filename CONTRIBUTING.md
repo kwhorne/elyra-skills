@@ -133,11 +133,21 @@ What the agent should *not* do.
 
    And add a row to the catalog table in [`README.md`](README.md).
 
-5. **Open the PR**
+5. **Validate locally** (recommended)
+
+   ```bash
+   pip install jsonschema      # one-time
+   python3 scripts/validate.py
+   ```
+
+   The same script runs in CI on every PR. Catching issues locally is faster.
+
+6. **Open the PR**
 
    - Title: `skill: <your-skill-name>`
    - Describe what it does, when it triggers, and how you tested it
    - One skill per PR, please
+   - CI must pass before review
 
 ---
 
@@ -160,7 +170,28 @@ Typical turnaround is a few days. We may suggest tweaks to the description (this
 - Run `/skills` in Elyra to inspect loaded skills, including script/reference counts and source path
 - `/reload` re-scans skill directories without restarting Elyra
 - If a skill isn't being picked up, check `/skills` output for validation warnings (name mismatch, missing description, etc.)
+- Run `python3 scripts/validate.py` before pushing — same checks CI runs
 - See **[elyracode.com](https://elyracode.com)** for the full skills loading model, including precedence rules between extension / global / project scopes
+
+## What CI checks
+
+Every PR runs [`.github/workflows/validate.yml`](.github/workflows/validate.yml), which:
+
+1. Parses `registry.json` and `registry.schema.json` as JSON
+2. Validates `registry.json` against the schema
+3. For every `skills/<name>/SKILL.md`:
+   - Frontmatter present and parseable
+   - `name` matches folder, valid characters, ≤64 chars
+   - `description` present, non-empty, ≤1024 chars
+   - `license` (if set) is a recognized SPDX identifier
+   - `scripts/*` files are executable
+4. Verifies that `registry.json` ↔ `skills/` are in 1:1 sync
+5. Verifies `path` fields in `registry.json` are `skills/<name>`
+6. Warns if a registry description has drifted from the SKILL.md frontmatter
+7. Lints any shell scripts with `shellcheck`
+8. Confirms every `SKILL.md` has an H1 heading after the frontmatter
+
+If CI fails, the log points at the exact file and line.
 
 ---
 
