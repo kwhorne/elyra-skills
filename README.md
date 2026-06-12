@@ -74,6 +74,10 @@ This repo is a community pool of skills that:
 | [`threat-modeling`](skills/threat-modeling/) | STRIDE-based threat modeling at design time: trust boundaries, ranked risks, mitigations |
 | [`deprecation-migration`](skills/deprecation-migration/) | Retire APIs/libraries/fields safely: expand → migrate → contract, with telemetry and deadlines |
 | [`git-workflow`](skills/git-workflow/) | Branching discipline, rebase vs merge, history hygiene, bisect, and reflog recovery |
+| [`llm-feature-design`](skills/llm-feature-design/) | Production-grade LLM features: structured output, fallbacks, evals, cost control, guardrails |
+| [`context-engineering`](skills/context-engineering/) | Agent context files (AGENTS.md/CLAUDE.md) that steer without bloat — commands, conventions, boundaries |
+| [`tech-debt-triage`](skills/tech-debt-triage/) | Rank debt by interest paid (churn × friction), not ugliness; paydown plan attached to roadmap |
+| [`resilience-patterns`](skills/resilience-patterns/) | Timeouts, retries with jitter, idempotency, circuit breakers, bulkheads, graceful degradation |
 
 The full machine-readable index is in [`registry.json`](registry.json). It's what `/skills install` uses to resolve names → URLs.
 

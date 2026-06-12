@@ -457,6 +457,60 @@
       ],
       "version": "1.0.0",
       "author": "elyra-skills"
+    },
+    {
+      "name": "llm-feature-design",
+      "description": "Design LLM-powered features that survive production - model choice, prompt structure, structured output, fallbacks, cost control, evals, and guardrails. Use when the user wants to add AI/LLM functionality to a product, asks about prompt design, RAG, agent features, handling model failures, or evaluating LLM output quality.",
+      "path": "skills/llm-feature-design",
+      "tags": [
+        "llm",
+        "ai",
+        "prompts",
+        "evals",
+        "guardrails"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "context-engineering",
+      "description": "Write and maintain agent context files (AGENTS.md, CLAUDE.md, .cursorrules) that actually steer coding agents - commands, conventions, architecture, and boundaries, without bloat. Use when the user wants to set up or improve agent instructions for a project, asks why an agent keeps making the same mistake, or wants to make a codebase agent-friendly.",
+      "path": "skills/context-engineering",
+      "tags": [
+        "agents",
+        "context",
+        "agents-md",
+        "documentation"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "tech-debt-triage",
+      "description": "Inventory technical debt and prioritize it by interest paid, not by annoyance - quantify cost, classify, and produce a ranked paydown plan that survives contact with a roadmap. Use when the user asks what to refactor first, wants a tech debt audit, needs to justify cleanup work to stakeholders, or asks whether to fix or live with a known problem.",
+      "path": "skills/tech-debt-triage",
+      "tags": [
+        "tech-debt",
+        "prioritization",
+        "refactoring",
+        "maintenance"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "resilience-patterns",
+      "description": "Make calls to dependencies survive failure - timeouts, retries with backoff and jitter, idempotency, circuit breakers, bulkheads, and graceful degradation. Use when the user integrates an external service or API, asks about retries or timeouts, debugs cascading failures, or wants a resilience review of service-to-service calls.",
+      "path": "skills/resilience-patterns",
+      "tags": [
+        "resilience",
+        "retries",
+        "timeouts",
+        "circuit-breaker",
+        "reliability"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
     }
   ]
 }
