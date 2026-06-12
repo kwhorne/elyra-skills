@@ -108,6 +108,19 @@ Skills are organized by development lifecycle phase. Start with [`using-elyra-sk
 | [`onboarding-doc`](skills/onboarding-doc/) | Make new hires productive in days, not weeks — 30-minute rule, journey structure |
 | [`context-engineering`](skills/context-engineering/) | Agent context files (AGENTS.md/CLAUDE.md) that steer without bloat — commands, conventions, boundaries |
 
+### 🧱 Stack-specific
+
+Opinionated workflows for specific frameworks — complements (doesn't duplicate) deep API reference material.
+
+| Skill | Stack | What it does |
+|---|---|---|
+| [`laravel-eloquent-performance`](skills/laravel-eloquent-performance/) | Laravel | Find & fix N+1, eager loading strategy, chunking, indexes — measured before/after |
+| [`laravel-queue-design`](skills/laravel-queue-design/) | Laravel | Jobs that survive production: idempotency, retries/backoff, failure story, batching, Horizon |
+| [`laravel-testing`](skills/laravel-testing/) | Laravel | Feature-first testing with Pest/PHPUnit: factories, DB strategy, what to fake, auth coverage |
+| [`laravel-ai-features`](skills/laravel-ai-features/) | Laravel AI | Agents & tools with laravel/ai: placement, structured output, fakes in tests, cost guards |
+| [`livewire-component-design`](skills/livewire-component-design/) | Livewire | Component boundaries, state ownership, round-trip budget, Alpine handoff, locked props |
+| [`flux-ui-patterns`](skills/flux-ui-patterns/) | Flux UI | Use components as designed: field composition, variants over overrides, theming via variables |
+
 ### 🧠 Meta
 
 | Skill | What it does |
