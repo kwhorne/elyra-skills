@@ -69,6 +69,11 @@ This repo is a community pool of skills that:
 | [`incremental-implementation`](skills/incremental-implementation/) | Build one verified, committed step at a time; green to green, never broken in between |
 | [`adr-author`](skills/adr-author/) | Architecture Decision Records: context, honest alternatives, decision, consequences |
 | [`ci-cd-pipeline`](skills/ci-cd-pipeline/) | Design/review CI/CD: fail-fast stages, caching, secrets, quality gates, safe deploys |
+| [`codebase-exploration`](skills/codebase-exploration/) | Map an unfamiliar codebase: entry points, traced flows, conventions, hotspots |
+| [`idea-refine`](skills/idea-refine/) | Interview a vague idea into a buildable concept — problem, users, constraints, v1 scope |
+| [`threat-modeling`](skills/threat-modeling/) | STRIDE-based threat modeling at design time: trust boundaries, ranked risks, mitigations |
+| [`deprecation-migration`](skills/deprecation-migration/) | Retire APIs/libraries/fields safely: expand → migrate → contract, with telemetry and deadlines |
+| [`git-workflow`](skills/git-workflow/) | Branching discipline, rebase vs merge, history hygiene, bisect, and reflog recovery |
 
 The full machine-readable index is in [`registry.json`](registry.json). It's what `/skills install` uses to resolve names → URLs.
 

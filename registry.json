@@ -392,6 +392,71 @@
       ],
       "version": "1.0.0",
       "author": "elyra-skills"
+    },
+    {
+      "name": "codebase-exploration",
+      "description": "Systematically explore and understand an unfamiliar codebase - entry points, architecture, data flow, conventions, and hotspots - before changing anything. Use when the user asks how a project works, asks to onboard onto a codebase, asks \"where is X handled\", or before implementing in a project you haven't mapped yet.",
+      "path": "skills/codebase-exploration",
+      "tags": [
+        "exploration",
+        "onboarding",
+        "architecture",
+        "reading-code"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "idea-refine",
+      "description": "Sharpen a vague idea into a buildable concept by interviewing the user - probe the problem, users, constraints, and success criteria before any spec or code. Use when the user pitches a rough idea, says \"I want to build something like\u2026\", asks for help thinking through a concept, or when a request is too fuzzy to spec.",
+      "path": "skills/idea-refine",
+      "tags": [
+        "ideation",
+        "discovery",
+        "requirements",
+        "interview"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "threat-modeling",
+      "description": "Model threats before building - map assets, trust boundaries, and attack surfaces, walk STRIDE categories, and rank risks with concrete mitigations. Use when the user designs a new feature or system that handles sensitive data or auth, asks \"how could this be abused\", or wants a threat model or security design review before implementation.",
+      "path": "skills/threat-modeling",
+      "tags": [
+        "security",
+        "threat-modeling",
+        "stride",
+        "design"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "deprecation-migration",
+      "description": "Retire an API, library, field, or pattern safely - parallel-run old and new, migrate consumers with warnings and deadlines, then remove the old path completely. Use when the user wants to deprecate an endpoint or feature, replace a library or framework, rename/remove a schema field, or asks how to migrate consumers without breaking them.",
+      "path": "skills/deprecation-migration",
+      "tags": [
+        "deprecation",
+        "migration",
+        "api",
+        "legacy"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "git-workflow",
+      "description": "Work git like a professional - branching discipline, rebase vs merge, history hygiene, interactive rebase, bisect, and recovering from mistakes with reflog. Use when the user asks about branching strategy, fixing a messy history, undoing a git mistake, resolving conflicts, splitting commits, or any non-trivial git operation.",
+      "path": "skills/git-workflow",
+      "tags": [
+        "git",
+        "branching",
+        "history",
+        "recovery"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
     }
   ]
 }
