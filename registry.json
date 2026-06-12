@@ -608,6 +608,62 @@
       ],
       "version": "1.0.0",
       "author": "elyra-skills"
+    },
+    {
+      "name": "vue-component-patterns",
+      "description": "Design Vue 3 components with Composition API discipline - props/emits contracts, composables for shared logic, state placement (local vs Pinia), and render performance. Use when creating or reviewing Vue components, deciding where state lives, extracting reusable logic, debugging reactivity issues, or when a Vue app's components have grown tangled.",
+      "path": "skills/vue-component-patterns",
+      "tags": [
+        "vue",
+        "components",
+        "composition-api",
+        "composables",
+        "pinia"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "inertia-patterns",
+      "description": "Build VILT apps with Inertia.js the intended way - controller-to-page data flow, form handling, partial reloads, shared data, and type sync between Laravel and Vue. Use when building or reviewing Inertia pages and controllers, deciding what data a page receives, handling forms and validation errors, or when an Inertia app over-fetches or drifts out of type sync.",
+      "path": "skills/inertia-patterns",
+      "tags": [
+        "inertia",
+        "vilt",
+        "laravel",
+        "vue",
+        "spa"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "primevue-patterns",
+      "description": "Use PrimeVue 4 effectively - theme with design tokens instead of CSS overrides, configure DataTables for server-side data, build validated forms, and keep bundle size in check. Use when building or reviewing Vue UIs with PrimeVue components, customizing the theme, wiring DataTable to a Laravel/API backend, or when PrimeVue styling is being fought with !important.",
+      "path": "skills/primevue-patterns",
+      "tags": [
+        "primevue",
+        "vue",
+        "ui",
+        "theming",
+        "datatable"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "filament-resource-design",
+      "description": "Build Filament admin panels that stay fast and maintainable - resource vs custom page decisions, table and form design, actions, authorization via policies, and query performance in tables. Use when creating or reviewing Filament resources, deciding how to structure an admin panel, adding actions or widgets, or when a Filament table is slow or an admin panel has grown chaotic.",
+      "path": "skills/filament-resource-design",
+      "tags": [
+        "filament",
+        "laravel",
+        "admin",
+        "crud",
+        "panels"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
     }
   ]
 }

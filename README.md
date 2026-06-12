@@ -120,6 +120,10 @@ Opinionated workflows for specific frameworks — complements (doesn't duplicate
 | [`laravel-ai-features`](skills/laravel-ai-features/) | Laravel AI | Agents & tools with laravel/ai: placement, structured output, fakes in tests, cost guards |
 | [`livewire-component-design`](skills/livewire-component-design/) | Livewire | Component boundaries, state ownership, round-trip budget, Alpine handoff, locked props |
 | [`flux-ui-patterns`](skills/flux-ui-patterns/) | Flux UI | Use components as designed: field composition, variants over overrides, theming via variables |
+| [`vue-component-patterns`](skills/vue-component-patterns/) | Vue 3 | Props/emits contracts, composables, state placement (local vs Pinia), reactivity discipline |
+| [`inertia-patterns`](skills/inertia-patterns/) | Inertia/VILT | Controller-shaped props, useForm flows, partial reloads, redirect-after-mutate, type sync |
+| [`primevue-patterns`](skills/primevue-patterns/) | PrimeVue 4 | Design tokens over CSS overrides, server-side DataTables, form composition, bundle hygiene |
+| [`filament-resource-design`](skills/filament-resource-design/) | Filament | Resource vs custom page, policies first, table query performance, actions for domain operations |
 
 ### 🧠 Meta
 
