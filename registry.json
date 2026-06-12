@@ -329,6 +329,69 @@
       ],
       "version": "1.0.0",
       "author": "elyra-skills"
+    },
+    {
+      "name": "spec-writing",
+      "description": "Write a focused spec before building - problem statement, scope, acceptance criteria, edge cases, and open questions. Use when the user describes a feature to build, asks for a spec or PRD, or starts a task that is too vague to implement directly.",
+      "path": "skills/spec-writing",
+      "tags": [
+        "spec",
+        "planning",
+        "requirements"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "task-breakdown",
+      "description": "Break a feature or spec into small, atomic, independently verifiable tasks with explicit ordering and dependencies. Use when the user asks to plan implementation, create a task list, estimate work, or when a spec is ready and needs to become an executable plan.",
+      "path": "skills/task-breakdown",
+      "tags": [
+        "planning",
+        "tasks",
+        "estimation"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "incremental-implementation",
+      "description": "Implement a plan one small, verified, committed step at a time - never leave the codebase broken between steps. Use when implementing a planned feature, executing a task list, doing a large change that must stay reviewable, or when the user asks to build something step by step.",
+      "path": "skills/incremental-implementation",
+      "tags": [
+        "implementation",
+        "workflow",
+        "commits"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "adr-author",
+      "description": "Write an Architecture Decision Record - capture the context, options considered, decision, and consequences so future readers understand why, not just what. Use when the user makes a significant technical choice, asks to document a decision, asks \"why did we choose X\", or wants to set up ADRs in a project.",
+      "path": "skills/adr-author",
+      "tags": [
+        "adr",
+        "architecture",
+        "documentation",
+        "decisions"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
+    },
+    {
+      "name": "ci-cd-pipeline",
+      "description": "Design or review a CI/CD pipeline - stage ordering, quality gates, caching, secrets handling, and deploy strategy. Use when the user asks to set up CI, fix a slow or flaky pipeline, review GitHub Actions/GitLab CI config, add quality gates, or design a deployment workflow.",
+      "path": "skills/ci-cd-pipeline",
+      "tags": [
+        "ci",
+        "cd",
+        "automation",
+        "github-actions",
+        "deploy"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
     }
   ]
 }

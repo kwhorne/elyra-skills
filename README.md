@@ -64,6 +64,11 @@ This repo is a community pool of skills that:
 | [`runbook-author`](skills/runbook-author/) | Write runbooks the next on-call can actually use at 3 AM |
 | [`caching-strategy`](skills/caching-strategy/) | Design caches: layers, keys, TTLs, invalidation; avoid stampede/avalanche/penetration |
 | [`error-handling`](skills/error-handling/) | Throw vs return, where to catch, error → user/operator mapping, retries with idempotency |
+| [`spec-writing`](skills/spec-writing/) | Write a focused spec before building: scope, acceptance criteria, edge cases, open questions |
+| [`task-breakdown`](skills/task-breakdown/) | Break a spec into small, atomic, verifiable tasks — vertical slices, risk first |
+| [`incremental-implementation`](skills/incremental-implementation/) | Build one verified, committed step at a time; green to green, never broken in between |
+| [`adr-author`](skills/adr-author/) | Architecture Decision Records: context, honest alternatives, decision, consequences |
+| [`ci-cd-pipeline`](skills/ci-cd-pipeline/) | Design/review CI/CD: fail-fast stages, caching, secrets, quality gates, safe deploys |
 
 The full machine-readable index is in [`registry.json`](registry.json). It's what `/skills install` uses to resolve names → URLs.
 
