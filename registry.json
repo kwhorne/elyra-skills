@@ -511,6 +511,19 @@
       ],
       "version": "1.0.0",
       "author": "elyra-skills"
+    },
+    {
+      "name": "using-elyra-skills",
+      "description": "Navigate the elyra-skills registry - pick the right skill for the task, chain skills across the development lifecycle, and combine them without conflicts. Use when unsure which skill applies, when a task spans multiple skills, when the user asks what skills exist or how they fit together, or at the start of a large multi-phase task.",
+      "path": "skills/using-elyra-skills",
+      "tags": [
+        "meta",
+        "skills",
+        "workflow",
+        "lifecycle"
+      ],
+      "version": "1.0.0",
+      "author": "elyra-skills"
     }
   ]
 }

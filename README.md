@@ -36,48 +36,83 @@ This repo is a community pool of skills that:
 
 ## 📚 Catalog
 
+Skills are organized by development lifecycle phase. Start with [`using-elyra-skills`](skills/using-elyra-skills/) if you're unsure which skill fits, or how to chain them.
+
+### 🧭 Define & design
+
 | Skill | What it does |
 |---|---|
-| [`code-review`](skills/code-review/) | Structured review with severity-tagged feedback (blocker / major / minor / nit) |
-| [`conventional-commits`](skills/conventional-commits/) | Generate [Conventional Commits](https://www.conventionalcommits.org) messages from staged changes |
-| [`debugging`](skills/debugging/) | Systematic debugging loop: reproduce → isolate → fix → verify → prevent regression |
-| [`pr-description`](skills/pr-description/) | Write clear, scannable pull-request descriptions from a diff |
-| [`refactoring`](skills/refactoring/) | Safe refactoring: characterization tests first, small reversible steps |
-| [`test-writing`](skills/test-writing/) | Decide what to test, structure tests with arrange/act/assert, avoid common pitfalls |
-| [`api-design`](skills/api-design/) | Design consistent HTTP/REST endpoints: naming, status codes, pagination, errors |
-| [`security-audit`](skills/security-audit/) | OWASP-flavored review focused on input handling, auth, secrets, and dependencies |
-| [`accessibility-review`](skills/accessibility-review/) | WCAG 2.2 AA review: semantics, keyboard, screen reader, contrast, forms, dynamic UI |
-| [`performance-budget`](skills/performance-budget/) | Define & enforce perf budgets: bundle size, Core Web Vitals, API latency, CI gates |
-| [`changelog`](skills/changelog/) | Maintain `CHANGELOG.md` (Keep a Changelog + SemVer); cut releases cleanly |
-| [`dependency-update`](skills/dependency-update/) | Safely bump dependencies: risk-classify, batch, verify, handle advisories |
-| [`i18n-review`](skills/i18n-review/) | Internationalization audit: strings, plurals, dates/numbers/currencies, RTL, sorting |
-| [`incident-response`](skills/incident-response/) | Production incident workflow: triage, mitigate, communicate, postmortem |
-| [`feature-flag-rollout`](skills/feature-flag-rollout/) | Plan & execute safe feature rollouts: flag design, ramp, monitor, clean up |
-| [`release-checklist`](skills/release-checklist/) | Pre/during/post-release checklist with rollback plan |
-| [`database-migration`](skills/database-migration/) | Safe schema changes: expand/contract, lock awareness, backfill strategy |
-| [`observability`](skills/observability/) | What to instrument with logs, metrics, traces; alerts that are actionable |
-| [`code-style-guide`](skills/code-style-guide/) | Set up & enforce a style guide: formatter, linter, type checker, hooks, CI |
-| [`architecture-review`](skills/architecture-review/) | Evaluate designs against non-functional requirements; ADR template |
-| [`data-privacy-review`](skills/data-privacy-review/) | GDPR/CCPA-style audit: minimization, consent, subject rights, retention, transfers |
-| [`cost-optimization`](skills/cost-optimization/) | Find cloud waste (idle, oversized, egress, observability); quantify before recommending |
-| [`onboarding-doc`](skills/onboarding-doc/) | Make new hires productive in days, not weeks — 30-minute rule, journey structure |
-| [`runbook-author`](skills/runbook-author/) | Write runbooks the next on-call can actually use at 3 AM |
-| [`caching-strategy`](skills/caching-strategy/) | Design caches: layers, keys, TTLs, invalidation; avoid stampede/avalanche/penetration |
-| [`error-handling`](skills/error-handling/) | Throw vs return, where to catch, error → user/operator mapping, retries with idempotency |
+| [`idea-refine`](skills/idea-refine/) | Interview a vague idea into a buildable concept — problem, users, constraints, v1 scope |
 | [`spec-writing`](skills/spec-writing/) | Write a focused spec before building: scope, acceptance criteria, edge cases, open questions |
+| [`api-design`](skills/api-design/) | Design consistent HTTP/REST endpoints: naming, status codes, pagination, errors |
+| [`architecture-review`](skills/architecture-review/) | Evaluate designs against non-functional requirements; ADR template |
+| [`threat-modeling`](skills/threat-modeling/) | STRIDE-based threat modeling at design time: trust boundaries, ranked risks, mitigations |
+| [`adr-author`](skills/adr-author/) | Architecture Decision Records: context, honest alternatives, decision, consequences |
+
+### 📐 Plan & build
+
+| Skill | What it does |
+|---|---|
 | [`task-breakdown`](skills/task-breakdown/) | Break a spec into small, atomic, verifiable tasks — vertical slices, risk first |
 | [`incremental-implementation`](skills/incremental-implementation/) | Build one verified, committed step at a time; green to green, never broken in between |
-| [`adr-author`](skills/adr-author/) | Architecture Decision Records: context, honest alternatives, decision, consequences |
-| [`ci-cd-pipeline`](skills/ci-cd-pipeline/) | Design/review CI/CD: fail-fast stages, caching, secrets, quality gates, safe deploys |
 | [`codebase-exploration`](skills/codebase-exploration/) | Map an unfamiliar codebase: entry points, traced flows, conventions, hotspots |
-| [`idea-refine`](skills/idea-refine/) | Interview a vague idea into a buildable concept — problem, users, constraints, v1 scope |
-| [`threat-modeling`](skills/threat-modeling/) | STRIDE-based threat modeling at design time: trust boundaries, ranked risks, mitigations |
-| [`deprecation-migration`](skills/deprecation-migration/) | Retire APIs/libraries/fields safely: expand → migrate → contract, with telemetry and deadlines |
-| [`git-workflow`](skills/git-workflow/) | Branching discipline, rebase vs merge, history hygiene, bisect, and reflog recovery |
-| [`llm-feature-design`](skills/llm-feature-design/) | Production-grade LLM features: structured output, fallbacks, evals, cost control, guardrails |
-| [`context-engineering`](skills/context-engineering/) | Agent context files (AGENTS.md/CLAUDE.md) that steer without bloat — commands, conventions, boundaries |
-| [`tech-debt-triage`](skills/tech-debt-triage/) | Rank debt by interest paid (churn × friction), not ugliness; paydown plan attached to roadmap |
+| [`error-handling`](skills/error-handling/) | Throw vs return, where to catch, error → user/operator mapping, retries with idempotency |
+| [`caching-strategy`](skills/caching-strategy/) | Design caches: layers, keys, TTLs, invalidation; avoid stampede/avalanche/penetration |
 | [`resilience-patterns`](skills/resilience-patterns/) | Timeouts, retries with jitter, idempotency, circuit breakers, bulkheads, graceful degradation |
+| [`database-migration`](skills/database-migration/) | Safe schema changes: expand/contract, lock awareness, backfill strategy |
+| [`llm-feature-design`](skills/llm-feature-design/) | Production-grade LLM features: structured output, fallbacks, evals, cost control, guardrails |
+
+### ✅ Verify & review
+
+| Skill | What it does |
+|---|---|
+| [`debugging`](skills/debugging/) | Systematic debugging loop: reproduce → isolate → fix → verify → prevent regression |
+| [`test-writing`](skills/test-writing/) | Decide what to test, structure tests with arrange/act/assert, avoid common pitfalls |
+| [`code-review`](skills/code-review/) | Structured review with severity-tagged feedback (blocker / major / minor / nit) |
+| [`security-audit`](skills/security-audit/) | OWASP-flavored review focused on input handling, auth, secrets, and dependencies |
+| [`accessibility-review`](skills/accessibility-review/) | WCAG 2.2 AA review: semantics, keyboard, screen reader, contrast, forms, dynamic UI |
+| [`i18n-review`](skills/i18n-review/) | Internationalization audit: strings, plurals, dates/numbers/currencies, RTL, sorting |
+| [`performance-budget`](skills/performance-budget/) | Define & enforce perf budgets: bundle size, Core Web Vitals, API latency, CI gates |
+| [`data-privacy-review`](skills/data-privacy-review/) | GDPR/CCPA-style audit: minimization, consent, subject rights, retention, transfers |
+| [`code-style-guide`](skills/code-style-guide/) | Set up & enforce a style guide: formatter, linter, type checker, hooks, CI |
+
+### 🚀 Ship
+
+| Skill | What it does |
+|---|---|
+| [`conventional-commits`](skills/conventional-commits/) | Generate [Conventional Commits](https://www.conventionalcommits.org) messages from staged changes |
+| [`pr-description`](skills/pr-description/) | Write clear, scannable pull-request descriptions from a diff |
+| [`git-workflow`](skills/git-workflow/) | Branching discipline, rebase vs merge, history hygiene, bisect, and reflog recovery |
+| [`ci-cd-pipeline`](skills/ci-cd-pipeline/) | Design/review CI/CD: fail-fast stages, caching, secrets, quality gates, safe deploys |
+| [`release-checklist`](skills/release-checklist/) | Pre/during/post-release checklist with rollback plan |
+| [`feature-flag-rollout`](skills/feature-flag-rollout/) | Plan & execute safe feature rollouts: flag design, ramp, monitor, clean up |
+| [`changelog`](skills/changelog/) | Maintain `CHANGELOG.md` (Keep a Changelog + SemVer); cut releases cleanly |
+
+### 🛠 Operate
+
+| Skill | What it does |
+|---|---|
+| [`observability`](skills/observability/) | What to instrument with logs, metrics, traces; alerts that are actionable |
+| [`incident-response`](skills/incident-response/) | Production incident workflow: triage, mitigate, communicate, postmortem |
+| [`runbook-author`](skills/runbook-author/) | Write runbooks the next on-call can actually use at 3 AM |
+| [`cost-optimization`](skills/cost-optimization/) | Find cloud waste (idle, oversized, egress, observability); quantify before recommending |
+
+### 🔧 Maintain & evolve
+
+| Skill | What it does |
+|---|---|
+| [`refactoring`](skills/refactoring/) | Safe refactoring: characterization tests first, small reversible steps |
+| [`tech-debt-triage`](skills/tech-debt-triage/) | Rank debt by interest paid (churn × friction), not ugliness; paydown plan attached to roadmap |
+| [`dependency-update`](skills/dependency-update/) | Safely bump dependencies: risk-classify, batch, verify, handle advisories |
+| [`deprecation-migration`](skills/deprecation-migration/) | Retire APIs/libraries/fields safely: expand → migrate → contract, with telemetry and deadlines |
+| [`onboarding-doc`](skills/onboarding-doc/) | Make new hires productive in days, not weeks — 30-minute rule, journey structure |
+| [`context-engineering`](skills/context-engineering/) | Agent context files (AGENTS.md/CLAUDE.md) that steer without bloat — commands, conventions, boundaries |
+
+### 🧠 Meta
+
+| Skill | What it does |
+|---|---|
+| [`using-elyra-skills`](skills/using-elyra-skills/) | Pick the right skill, chain them across the lifecycle, combine without conflicts |
 
 The full machine-readable index is in [`registry.json`](registry.json). It's what `/skills install` uses to resolve names → URLs.
 
