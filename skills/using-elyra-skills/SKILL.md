@@ -48,6 +48,27 @@ adr-author                         resilience-        i18n-review      conventio
 
 Cross-cutting (any phase): `context-engineering`, `onboarding-doc`, `git-workflow`.
 
+## Stack-specific skills
+
+Stack skills are selected **in addition to** the phase skill, never instead of it. The phase skill drives the workflow; the stack skill supplies the framework-specific rules and checklists for the steps.
+
+| Project signal | Stack skills |
+|---|---|
+| Laravel (`composer.json` has `laravel/framework`) | `laravel-eloquent-performance`, `laravel-queue-design`, `laravel-testing` |
+| Laravel + `laravel/ai` | `laravel-ai-features` (layered on `llm-feature-design`) |
+| TALL (Livewire, Flux) | `livewire-component-design`, `flux-ui-patterns` |
+| VILT (Vue, Inertia) | `vue-component-patterns`, `inertia-patterns` |
+| PrimeVue in `package.json` | `primevue-patterns` |
+| Filament panels | `filament-resource-design` |
+
+Examples of the pairing:
+
+- Slow Laravel page → `debugging` (primary, owns the loop) + `laravel-eloquent-performance` (the stack checklist inside steps 2–4)
+- New TALL feature → `task-breakdown` → `incremental-implementation` (primary) + `livewire-component-design` / `flux-ui-patterns` consulted per task
+- Testing phase in a Laravel app → `test-writing` for *what* to test, `laravel-testing` for *how* to test it here
+
+Detect the stack from manifests (`composer.json`, `package.json`) before assuming — don't load Laravel skills into a Django repo because the user said "backend".
+
 ## Standard chains
 
 **New feature, end to end:**
